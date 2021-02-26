@@ -26,17 +26,7 @@ execute as @e[tag=custom_mob4,type=minecraft:zombie] at @s store result entity @
 execute as @e[tag=custom_mob4,type=armor_stand] at @s unless entity @e[type=zombie,tag=custom_mob4,distance=0..1] run kill @s
 execute as @e[type=zombie,tag=!not_mob4,sort=random] at @s run function mobs:zombie2/summon
 
-#Slimer natural spawn
-execute as @e[tag=custom_mob5,type=minecraft:slime] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob5, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
-execute as @e[tag=custom_mob5,type=armor_stand] at @s unless entity @e[type=slime,tag=custom_mob5,distance=0..1] run kill @s
-execute as @e[type=slime,tag=!not_mob5,sort=random] at @s run function mobs:slimer/summon
-
-#CubeTower natural spawn
-execute as @e[tag=custom_mob6,type=minecraft:magma_cube] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob6, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
-execute as @e[tag=custom_mob6,type=armor_stand] at @s unless entity @e[type=magma_cube,tag=custom_mob6,distance=0..1] run kill @s
-execute as @e[type=magma_cube,tag=!not_mob6,sort=random] at @s run function mobs:cubetower/summon
-
 #Exploder natural spawn
-execute as @e[tag=custom_mob7,type=minecraft:creeper] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob7, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
-execute as @e[tag=custom_mob7,type=armor_stand] at @s unless entity @e[type=creeper,tag=custom_mob6,distance=0..1] run kill @s
-execute as @e[type=creeper,tag=!not_mob7,sort=random] at @s run function mobs:exploder/summon
+execute as @e[tag=custom_mob5,type=minecraft:creeper] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob6, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob5,type=armor_stand] at @s unless entity @e[type=creeper,tag=custom_mob5,distance=0..1] run kill @s
+execute as @e[type=creeper,tag=!not_mob5,sort=random] at @s run function mobs:exploder/summon
