@@ -30,3 +30,13 @@ execute as @e[type=zombie,tag=!not_mob4,sort=random] at @s run function mobs:zom
 execute as @e[tag=custom_mob5,type=minecraft:creeper] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob6, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
 execute as @e[tag=custom_mob5,type=armor_stand] at @s unless entity @e[type=creeper,tag=custom_mob5,distance=0..1] run kill @s
 execute as @e[type=creeper,tag=!not_mob5,sort=random] at @s run function mobs:exploder/summon
+
+#BroodMother natural spawn
+execute as @e[tag=custom_mob6,type=minecraft:spider] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob6, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob6,type=armor_stand] at @s unless entity @e[type=spider,tag=custom_mob6,distance=0..1] run kill @s
+execute as @e[type=spider,tag=!not_mob6,sort=random] at @s run function mobs:broodmother/summon
+
+#PigBoss natural spawn
+execute as @e[tag=custom_mob7,type=minecraft:zombified_piglin] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob7, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob7,type=armor_stand] at @s unless entity @e[type=zombified_piglin,tag=custom_mob7,distance=0..1] run kill @s
+execute as @e[type=zombified_piglin,tag=!not_mob7,sort=random] at @s run function mobs:pigboss/summon
