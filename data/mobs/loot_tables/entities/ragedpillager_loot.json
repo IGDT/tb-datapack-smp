@@ -9,11 +9,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:string",
+          "name": "minecraft:arrow",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Futuristic string\",\"color\":\"red\",\"italic\":false}'},HideFlags:1,Enchantments:[{id:\"minecraft:unbreaking\",lvl:1s}]}"
+              "tag": "{display:{Name:'{\"text\":\"Mystic Arrow\",\"color\":\"red\",\"italic\":false}'},HideFlags:1,Enchantments:[{id:\"minecraft:unbreaking\",lvl:1s}]}"
             },
             {
               "function": "minecraft:set_count",
@@ -21,7 +21,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.1
+                  "chance": 0.2
                 }
               ]
             }
@@ -29,7 +29,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:cobweb",
+          "name": "minecraft:emerald_block",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -45,18 +45,15 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:string",
+          "name": "minecraft:iron_chestplate",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              },
+              "count": 1,
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.3
+                  "chance": 0.2
                 }
               ]
             }
@@ -64,18 +61,31 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:spider_eye",
+          "name": "minecraft:iron_leggings",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              },
+              "count": 1,
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.4
+                  "chance": 0.2
+                }
+              ]
+            }
+          ]
+        },
+		{
+          "type": "minecraft:item",
+          "name": "minecraft:iron_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.2
                 }
               ]
             }

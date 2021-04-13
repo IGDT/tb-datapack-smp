@@ -22,9 +22,9 @@ execute as @e[tag=custom_mob3,type=armor_stand] at @s unless entity @e[type=turt
 execute as @e[type=turtle,tag=!not_mob3,sort=random] at @s run function mobs:elderturtle/summon
 
 #Zombie2 natural spawn
-execute as @e[tag=custom_mob4,type=minecraft:zombie] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob4, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
-execute as @e[tag=custom_mob4,type=armor_stand] at @s unless entity @e[type=zombie,tag=custom_mob4,distance=0..1] run kill @s
-execute as @e[type=zombie,tag=!not_mob4,sort=random] at @s run function mobs:zombie2/summon
+#execute as @e[tag=custom_mob4,type=minecraft:zombie] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob4, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+#execute as @e[tag=custom_mob4,type=armor_stand] at @s unless entity @e[type=zombie,tag=custom_mob4,distance=0..1] run kill @s
+#execute as @e[type=zombie,tag=!not_mob4,sort=random] at @s run function mobs:zombie2/summon
 
 #Exploder natural spawn
 execute as @e[tag=custom_mob5,type=minecraft:creeper] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob6, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
@@ -40,3 +40,8 @@ execute as @e[type=spider,tag=!not_mob6,sort=random] at @s run function mobs:bro
 execute as @e[tag=custom_mob7,type=minecraft:zombified_piglin] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob7, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
 execute as @e[tag=custom_mob7,type=armor_stand] at @s unless entity @e[type=zombified_piglin,tag=custom_mob7,distance=0..1] run kill @s
 execute as @e[type=zombified_piglin,tag=!not_mob7,sort=random] at @s run function mobs:pigboss/summon
+
+#RagedPillager natural spawn
+execute as @e[tag=custom_mob8,type=minecraft:pillager] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob8, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob8,type=armor_stand] at @s unless entity @e[type=pillager,tag=custom_mob8,distance=0..1] run kill @s
+execute as @e[type=pillager,tag=!not_mob8,sort=random] at @s run function mobs:ragedpillager/summon
