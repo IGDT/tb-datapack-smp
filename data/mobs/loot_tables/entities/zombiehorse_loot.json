@@ -4,45 +4,25 @@
     {
       "rolls": {
         "min": 1,
-        "max": 2
+        "max": 3
       },
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:bone_block",
+          "name": "minecraft:rotten_flesh",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.3
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:flint",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Unique Starter\",\"color\":\"red\",\"italic\":false}'}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": 1
+                "max": 4
+              }
             }
           ],
           "conditions": [
             {
               "condition": "minecraft:random_chance",
-              "chance": 0.1
+              "chance": 0.6
             }
           ]
         },
@@ -51,15 +31,35 @@
           "name": "minecraft:bone",
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Time Bone\",\"color\":\"dark_purple\",\"italic\":false}'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "functions": [
+            {
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 5
+                "max": 3
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.3
                 }
               ]
             }

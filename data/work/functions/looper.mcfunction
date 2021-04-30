@@ -45,3 +45,23 @@ execute as @e[type=zombified_piglin,tag=!not_mob7,sort=random] at @s run functio
 execute as @e[tag=custom_mob8,type=minecraft:pillager] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob8, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
 execute as @e[tag=custom_mob8,type=armor_stand] at @s unless entity @e[type=pillager,tag=custom_mob8,distance=0..1] run kill @s
 execute as @e[type=pillager,tag=!not_mob8,sort=random] at @s run function mobs:ragedpillager/summon
+
+#MagmaBlaze natural spawn
+execute as @e[tag=custom_mob9,type=minecraft:blaze] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob9, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob9,type=armor_stand] at @s unless entity @e[type=blaze,tag=custom_mob9,distance=0..1] run kill @s
+execute as @e[type=blaze,tag=!not_mob9,sort=random] at @s run function mobs:magmablaze/summon
+
+#SuperMite natural spawn
+execute as @e[tag=custom_mob10,type=minecraft:endermite] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob10, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob10,type=armor_stand] at @s unless entity @e[type=endermite,tag=custom_mob10,distance=0..1] run kill @s
+execute as @e[type=endermite,tag=!not_mob10,sort=random] at @s run function mobs:supermite/summon
+
+#ZombieHorse natural spawn
+execute as @e[tag=custom_mob11,type=minecraft:zombie_horse] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob11, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob11,type=armor_stand] at @s unless entity @e[type=endermite,tag=custom_mob11,distance=0..1] run kill @s
+execute as @e[type=zombie_horse,tag=!not_mob11,sort=random] at @s run function mobs:zombiehorse/summon
+
+#RunningChicken natural spawn
+execute as @e[tag=custom_mob12,type=minecraft:chicken] at @s store result entity @e[type=minecraft:armor_stand,tag=custom_mob12, limit=1, sort=nearest] Rotation[0] float 1 run data get entity @s Rotation[0]
+execute as @e[tag=custom_mob12,type=armor_stand] at @s unless entity @e[type=endermite,tag=custom_mob12,distance=0..1] run kill @s
+execute as @e[type=chicken,tag=!not_mob12,sort=random] at @s run function mobs:runningchicken/summon

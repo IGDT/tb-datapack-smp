@@ -4,23 +4,43 @@
     {
       "rolls": {
         "min": 1,
-        "max": 2
+        "max": 3
       },
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:bone_block",
+          "name": "minecraft:ender_pearl",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 2
-              },
+                "max": 4
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.7
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blaze_rod",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Time Fruit\",\"color\":\"dark_purple\",\"italic\":false}'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1,
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.3
+                  "chance": 0.1
                 }
               ]
             }
@@ -28,38 +48,15 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:flint",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Unique Starter\",\"color\":\"red\",\"italic\":false}'}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.1
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bone",
+          "name": "minecraft:ender_chest",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 5
-              },
+              "count": 1,
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.2
                 }
               ]
             }

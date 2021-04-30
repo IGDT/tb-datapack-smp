@@ -4,23 +4,43 @@
     {
       "rolls": {
         "min": 1,
-        "max": 2
+        "max": 3
       },
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:bone_block",
+          "name": "minecraft:blaze_rod",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 2
-              },
+                "max": 3
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blaze_rod",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Barrel\",\"color\":\"red\",\"italic\":false}'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1,
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.3
+                  "chance": 0.1
                 }
               ]
             }
@@ -28,27 +48,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:flint",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Unique Starter\",\"color\":\"red\",\"italic\":false}'}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.1
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bone",
+          "name": "minecraft:netherrack",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -59,7 +59,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.5
                 }
               ]
             }

@@ -9,40 +9,30 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:netherite_sword",
+          "name": "minecraft:gold_ore",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly",
-              "enchantments": [
-                "minecraft:smite",
-                "minecraft:sharpness",
-                "minecraft:unbreaking"
-              ]
-            },
-			
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Damage:1900}"
-            },
-            {
               "function": "minecraft:set_count",
-              "count": 1,
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.05
-                }
-              ]
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.2
             }
           ]
         },
-		{
+        {
           "type": "minecraft:item",
-          "name": "minecraft:bone_meal",
+          "name": "minecraft:blaze_powder",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Heat Powder\",\"color\":\"black\",\"italic\":false}'}}"
+              "tag": "{display:{Name:'{\"text\":\"Mystic Animal Powder\",\"color\":\"light_purple\",\"italic\":false}'},HideFlags:1,Enchantments:[{id:\"minecraft:unbreaking\",lvl:1s}]}"
             },
             {
               "function": "minecraft:set_count",
@@ -58,42 +48,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:wither_skeleton_skull",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1,
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.05
-                }
-              ]
-            }
-          ]
-        },
-		{
-          "type": "minecraft:item",
-          "name": "minecraft:coal",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.4
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bone",
+          "name": "minecraft:gold_nugget",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -104,7 +59,36 @@
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.4
+                  "chance": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_axe",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:vanishing_curse",
+                "minecraft:fire_aspect",
+                "minecraft:bane_of_arthropods",
+                "minecraft:smite",
+                "minecraft:sharpness"
+              ]
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
                 }
               ]
             }
